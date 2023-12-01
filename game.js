@@ -28,7 +28,9 @@ for (let index = 0; index < buttonColors.length; index++) {
       playSound(buttonColors[index]);
       userClickedColor = this.id;
       userClickedPattern.push(userClickedColor);
-      checkAnswer(userClickedPattern.length - 1);
+      if (gameOn === true) {
+        checkAnswer(userClickedPattern.length - 1);
+      }
     });
 }
 
